@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "start": "cross-env NODE_ENV=production tsx src/server.ts",
-    "dev" : "cross-env NODE_ENV=development nodemon --exec tsx src/server.ts",
-    "build" : "tsc",
-    "server" : "node dist/server.js"
+    "dev": "cross-env NODE_ENV=development nodemon --exec tsx src/server.ts",
+    "build": "tsc",
+    "server": "node dist/server.js"
   },
   "engines": {
     "node": "22",
@@ -21,7 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.4.7",
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "prisma": "^6.3.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
