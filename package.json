@@ -5,7 +5,11 @@
   "main": "index.js",
   "type":"module",
   "scripts": {
-    "preinstall": "npx only-allow pnpm"
+    "preinstall": "npx only-allow pnpm",
+    "start": "cross-env NODE_ENV=production tsx src/server.ts",
+    "dev" : "cross-env NODE_ENV=development nodemon --exec tsx src/server.ts",
+    "build" : "tsc",
+    "server" : "node dist/server.js"
   },
   "engines": {
     "node": "22",
@@ -16,14 +20,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/express": "^5.0.0",
-    "@types/node": "^22.13.1",
-    "express": "^4.21.2",
-    "nodemon": "^3.1.9",
-    "ts-node": "^10.9.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "cross-env": "^7.0.3",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "nodemon": "^3.1.9",
     "prettier": "^3.5.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.3"
   }
 }
